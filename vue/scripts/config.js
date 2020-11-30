@@ -214,11 +214,11 @@ const builds = {
 }
 
 function genConfig (name) {
-  console.log(111)
   const opts = builds[name]
   const config = {
     input: opts.entry,
     external: opts.external,
+    sourceMap:true,
     plugins: [
       flow(),
       alias(Object.assign({}, aliases, opts.alias))
